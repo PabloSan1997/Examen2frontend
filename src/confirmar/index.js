@@ -1,6 +1,6 @@
 import React from "react";
 import { Contexto } from "../contextos";
-
+import './index.css'
 function Confirmar(){
     const {setconfirm, borrarTodo}=React.useContext(Contexto);
     return(
