@@ -1,0 +1,123 @@
+.contenedor {
+  width: 98%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+.contenedor .mensaje {
+  color: white;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor .fila {
+  width: 100%;
+  margin: auto auto 10px auto;
+}
+.contenedor .fila .pregunta {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  background: rgb(1, 1, 44);
+}
+.contenedor .fila .pregunta .texto {
+  width: 100%;
+  min-height: 50px;
+  color: white;
+  font-size: 1.3rem;
+  margin: auto auto auto 2%;
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 0;
+}
+.contenedor .fila .pregunta .area-boton {
+  width: 15%;
+  height: 100%;
+  margin: auto 0 auto auto;
+  display: flex;
+}
+.contenedor .fila .pregunta .area-boton .boton {
+  margin: auto;
+  font-size: 1.3rem;
+  padding: 2px 5px;
+  border: none;
+  background: rgb(18, 199, 18);
+  border-radius: 5px;
+  color:rgb(1, 34, 1);
+  cursor: pointer;
+}
+.contenedor .fila .pregunta .area-boton .boton:hover {
+    background: rgb(80, 201, 80);
+}
+.contenedor .fila .area-respuesta{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contenedor .fila .area-respuesta .respuesta{
+    width: 100%;
+    min-height: 50px;
+    margin:10px auto 0 auto;
+    display: flex;
+    box-shadow: 0 0 2px rgb(78, 241, 57);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.contenedor .fila .area-respuesta .respuesta p{
+    color: rgb(239, 255, 235);
+    font-family: arial;
+    margin: auto auto auto 2%;
+    max-width: 87%;
+}
+.contenedor .fila .area-respuesta .respuesta .entrada{
+    width:87%;
+    height:50px;
+    padding: 0 10px;
+    background: rgb(173, 179, 236);
+    border: none;
+    outline: none;
+    border-radius:  0 10px 10px 0;
+    font-size: 1.5rem;
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    margin: auto 0 auto auto;
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton .boton{
+    margin: auto;
+    font-size: 1rem;
+    background: rgb(43, 37, 104);
+    padding: 5px 0;
+    border: none;
+    color: rgba(147, 160, 230, 0.979);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton .boton.aceptar{
+    padding: 5px 10px;
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton .boton:hover{
+    background: rgb(192, 236, 192);
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton .boton.bot{
+    width: 35%;
+}
+.contenedor .fila .area-respuesta .respuesta .area-boton .boton.uno{
+    padding: 1px 2px;
+}
+.contenedor .fila .area-respuesta .respuesta.rojo{
+    background: rgba(80, 5, 5, 0.651);
+    box-shadow: 0 0 2px rgb(216, 58, 37);
+}
+
+.contenedor .fila .area-respuesta .respuesta.rojo .area-boton .boton{
+    background: rgb(39, 2, 2);
+    color: rgb(245, 125, 125);
+}
+
+.contenedor .fila .area-respuesta .respuesta.rojo .entrada{
+    background: rgb(255, 137, 137);
+}

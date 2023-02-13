@@ -1,0 +1,23 @@
+.buscador{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.buscador label{
+    color: white;
+    font-size: 2.1rem;
+    margin: auto auto auto 1%;
+    
+}
+.buscador .buscar{
+    width: 95%;
+    height: 65%;
+    margin: auto;
+    font-size: 1.6rem;
+    padding: 0 10px;
+    outline: none;
+    background: rgba(14, 124, 14, 0.568);
+    border: none;
+    color: rgb(115, 245, 83);
+}

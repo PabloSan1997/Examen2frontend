@@ -1,12 +1,12 @@
 import React from "react";
 import { Contexto } from "../contextos";
-
+import './index.css'
 function Contenedor() {
   const { datos, cargar, error } = React.useContext(Contexto);
   return (
     <div className="contenedor">
-      {cargar === 0 && <p>Cargando...</p>}
-      {cargar === 2 && <p>{datos}</p>}
+      {cargar === 0 && <p className="mensaje">Cargando...</p>}
+      {cargar === 2 && <p className="mensaje">{datos}</p>}
       {error && <p>Problemas para conectar con el servidor</p>}
       {cargar === 1 &&
         datos.map((ele) => (
@@ -46,7 +46,7 @@ function Preguntas({ pregunta, respuestas, num }) {
                 editar
               </button>
               <button className="boton" onClick={() => agregarRespuesta(num)}>
-                Agregar
+                +
               </button>
               <button className="boton" onClick={() => borrarPregunta(num)}>
                 X
@@ -97,19 +97,19 @@ function Respuestas({
       <div className="area-boton">
         {mostrar ? (
           <React.Fragment>
-            <button className="boton" onClick={() => setMostrar(false)}>
+            <button className="boton bot" onClick={() => setMostrar(false)}>
               editar
             </button>
-            <button className="boton" onClick={()=>onEditar(numPreg, numRes, {estado:!estadoR})}>
+            <button className="boton bot" onClick={()=>onEditar(numPreg, numRes, {estado:!estadoR})}>
               {estadoR?'Bien':'Mal'}
               </button>
-            <button className="boton" onClick={() => onBorrar(numPreg, numRes)}>
+            <button className="boton uno" onClick={() => onBorrar(numPreg, numRes)}>
               X
             </button>
           </React.Fragment>
         ) : (
           <button
-            className="boton"
+            className="boton aceptar"
             onClick={() => onEditar(numPreg, numRes, { respuesta: texto })}
           >
             Aceptar

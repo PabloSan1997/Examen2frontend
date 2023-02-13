@@ -1,6 +1,6 @@
 import React from "react";
 import { Contexto } from "../contextos";
-
+import './index.css'
 function Buscador(){
     const{setTextoBuscador, textoBuscador}=React.useContext(Contexto);
     return(

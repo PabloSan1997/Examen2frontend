@@ -1,8 +1,8 @@
 import React from "react";
 import { Contexto } from "../contextos";
-
+import './index.css'
 function Formulario(){
-    const {agregarPregunta}=React.useContext(Contexto);
+    const {agregarPregunta, setconfirm}=React.useContext(Contexto);
     const [valor, setValor]=React.useState('');
     return(
         <div className="formulario">
@@ -12,6 +12,7 @@ function Formulario(){
             </div>
             <div className="area-boton">
                 <button className="boton" onClick={()=>agregarPregunta({pregunta:valor})}>Enviar</button>
+                <button className="boton" onClick={()=>setconfirm(true)}>Borrar Todo</button>
             </div>
         </div>
     );

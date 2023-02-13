@@ -3,17 +3,18 @@ import { agregarPregunta } from "./sAgregarPregunta.js";
 import { agregarRespuesta } from "./sAgregarRespuesta.js";
 import { borrarPregunta } from "./sborrarPregunta.js";
 import { borrarRespuesta } from "./sborrarRespuesta.js";
+import { borrarTodo } from "./sBorrarTodo.js";
 import { editarPregunta } from "./sEditarPregunta.js";
 import { editarRespuesta } from "./sEditarRespuestas.js";
 import { useLeerDatos } from "./sLeerDatos.js";
 
 const Contexto = React.createContext();
-
 function Provedor({children}){
     const {data, cargar, error}=useLeerDatos();
     const [textoBuscador, setTextoBuscador]=React.useState('');
+    const [confirm, setconfirm]=React.useState(false);
     let datos;
-    if(cargar===1 && textoBuscador!=''){
+    if(cargar===1 && textoBuscador!==''){
       let nuevos = data.filter(elem=>{
         let preg = elem.pregunta.toLocaleUpperCase();
         let busc = textoBuscador.toLocaleUpperCase();
@@ -38,7 +39,10 @@ function Provedor({children}){
           editarRespuesta,
           editarPregunta,
           textoBuscador, 
-          setTextoBuscador
+          setTextoBuscador,
+          borrarTodo,
+          confirm, 
+          setconfirm
         }
       }
       >

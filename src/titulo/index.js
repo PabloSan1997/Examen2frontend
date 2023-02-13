@@ -1,5 +1,6 @@
 import React from "react";
 import { Contexto } from "../contextos";
+import './index.css'
 
 function Titulo() {
   const { datos } = React.useContext(Contexto);
@@ -18,7 +19,7 @@ function Titulo() {
 
   return (
     <div className="titulo">
-      <h1 className="titulo">Examen</h1>
+      <h1 className="tit">Ayuda examen</h1>
       <div className="nose">
         <p className="texto">Pregutnas totales:{preg} </p>
         <p className="texto">Errores: {malas.length}</p>
