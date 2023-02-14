@@ -7,7 +7,7 @@ function Contenedor() {
     <div className="contenedor">
       {cargar === 0 && <p className="mensaje">Cargando...</p>}
       {cargar === 2 && <p className="mensaje">{datos}</p>}
-      {error && <p>Problemas para conectar con el servidor</p>}
+      {error && <p className="mensaje">Problemas para conectar con el servidor</p>}
       {cargar === 1 &&
         datos.map((ele) => (
           <Preguntas
